@@ -1,10 +1,22 @@
 export default function Status(props) {
   return (
     <footer className='status'>
-      <h3 className='status-item'>Stock: {props.stock}</h3>
-      <h3 className='status-item'>Incubated: {props.incubated}</h3>
-      <h3 className='status-item'>Hacthed: {props.hatched}</h3>
-      <h3 className='status-item'>Invertil: {props.invertil}</h3>
+      <p className='status-item'>
+        Stock: <br />
+        {props.stock}
+      </p>
+      <p className='status-item'>
+        Incubated: <br />
+        {props.incubated}
+      </p>
+      <p className='status-item'>
+        Hacthed: <br />
+        {props.hatched}
+      </p>
+      <p className='status-item'>
+        Invertil: <br />
+        {props.invertil}
+      </p>
     </footer>
   );
 }

@@ -1,7 +1,10 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function InvertilFilter(props) {
   const [percentage, setPercentage] = useState(0);
+  useEffect(() => {
+    document.title = "Hatch";
+  }, []);
 
   const handleChange = (e) => {
     setPercentage(e.target.value);
@@ -17,9 +20,9 @@ export default function InvertilFilter(props) {
   };
   return (
     <div className='section'>
-      <h3 className='section-title'>
+      <h2 className='section-title'>
         After 18 days we filter the invertil eggs
-      </h3>
+      </h2>
       <p className='section-description'>
         Here is where we estimate how percent will hatching eggs is not hatched
         and will desroyed in process.

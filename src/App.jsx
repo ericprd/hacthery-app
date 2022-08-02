@@ -1,12 +1,14 @@
 import { Route, Routes } from "react-router-dom";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Home from "./Components/Home";
 import Holding from "./Components/Holding";
 import IncubationPhase from "./Components/IncubationPhase";
 import InvertilFilter from "./Components/InvertilFilter";
-import "./App.css";
 import Status from "./Components/Status";
 import Navbar from "./Components/Navbar";
+import NotFound from "./Components/NotFound";
+import "./App.css";
+import "./AppMobile.css";
 
 export default function App() {
   const [stock, setStock] = useState(0);
@@ -41,6 +43,7 @@ export default function App() {
             />
           }
         />
+        <Route path='*' element={<NotFound />} />
       </Routes>
 
       <Status

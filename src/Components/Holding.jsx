@@ -1,6 +1,11 @@
+import { useEffect } from "react";
 import InputEgg from "./InputEgg";
 
 export default function Holding(props) {
+  useEffect(() => {
+    document.title = "Holding";
+  }, []);
+
   const handleSubmit = (val) => {
     return props.setStock((prev) => Number(prev) + Number(val));
   };
@@ -10,7 +15,7 @@ export default function Holding(props) {
       <h2 className='section-title'>Holding Room</h2>
       <p className='section-description'>
         Here we receive hatch Egg (HE) from Farm, hatching eggs we receive from
-        farm then will be our stocks
+        farm then will be our stocks.
       </p>
       <label>Please input how many hatching eggs we receive:</label>
       <InputEgg handleSubmit={handleSubmit} />

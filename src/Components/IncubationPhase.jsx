@@ -1,6 +1,11 @@
+import { useEffect } from "react";
 import InputEgg from "./InputEgg";
 
 export default function IncubationPhase(props) {
+  useEffect(() => {
+    document.title = "Incubate";
+  }, []);
+
   const handleSubmit = (val) => {
     const valNum = Number(val);
     const stockNum = Number(props.stock);
@@ -16,7 +21,7 @@ export default function IncubationPhase(props) {
       <h2 className='section-title'>Incubation Phase</h2>
       <p className='section-description'>
         Here we will set how many hatching eggs that we will hatch, but we must
-        calculate how many request form client
+        calculate how many request form client.
       </p>
       <label>Input how much eggs that you want to hatch: </label>
       <InputEgg handleSubmit={handleSubmit} />

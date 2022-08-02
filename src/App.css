@@ -36,9 +36,12 @@
 
 .section {
   width: 550px;
-  margin: 30px auto;
   text-align: center;
   line-height: 45px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .section-list {
@@ -54,6 +57,8 @@
   border: 1px solid #ccc;
   padding: 10px;
   border-radius: 10px;
+  margin-top: 20px;
+  margin-bottom: 10px;
 }
 
 .invertile-input {
@@ -88,4 +93,13 @@
 
 .status-item:not(:last-child) {
   border-right: 1px solid #999;
+}
+.not-found {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: red;
+  font-size: 50px;
+  text-align: center;
 }
