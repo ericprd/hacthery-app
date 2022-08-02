@@ -1,5 +1,5 @@
 import { Route, Routes } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Home from "./Components/Home";
 import Holding from "./Components/Holding";
 import IncubationPhase from "./Components/IncubationPhase";
