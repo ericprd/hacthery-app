@@ -3,3 +3,89 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+#root {
+  height: 100vh;
+}
+
+.nav {
+  width: 100%;
+  background-color: #123f32;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-menu {
+  padding: 10px;
+  text-align: center;
+  font-size: 23px;
+  width: calc(100% / 4);
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+}
+
+.nav-menu:not(:last-child) {
+  border-right: 1px solid #999;
+}
+
+.nav-menu:hover {
+  background-color: rgba(122, 8, 12, 0.2);
+}
+
+.section {
+  width: 550px;
+  margin: 30px auto;
+  text-align: center;
+  line-height: 45px;
+}
+
+.section-list {
+  text-align: left;
+  margin-left: 20px;
+}
+
+.note {
+  color: chocolate;
+}
+
+.input {
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.invertile-input {
+  width: 100px;
+  text-align: right;
+  margin-right: 5px;
+}
+
+.submit {
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+}
+
+.status {
+  display: flex;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: wheat;
+  background-color: black;
+  padding: 15px;
+  justify-content: center;
+  align-items: center;
+}
+
+.status-item {
+  width: calc(100% / 4);
+  text-align: center;
+}
+
+.status-item:not(:last-child) {
+  border-right: 1px solid #999;
+}

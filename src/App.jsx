@@ -1,10 +1,12 @@
-import { Link, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import { useState } from "react";
 import Home from "./Components/Home";
 import Holding from "./Components/Holding";
 import IncubationPhase from "./Components/IncubationPhase";
 import InvertilFilter from "./Components/InvertilFilter";
 import "./App.css";
+import Status from "./Components/Status";
+import Navbar from "./Components/Navbar";
 
 export default function App() {
   const [stock, setStock] = useState(0);
@@ -14,12 +16,8 @@ export default function App() {
 
   return (
     <div>
-      <nav>
-        <Link to='/'>Home</Link>
-        <Link to='holding'>Holding</Link>
-        <Link to='incubate'>Incubate</Link>
-        <Link to='hatch'>Hatch</Link>
-      </nav>
+      <Navbar />
+
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='holding' element={<Holding setStock={setStock} />} />
@@ -45,10 +43,12 @@ export default function App() {
         />
       </Routes>
 
-      <h3>Stock: {stock}</h3>
-      <h3>Incubated: {incubated}</h3>
-      <h3>Hacthed: {hatched}</h3>
-      <h3>Invertil: {invertil}</h3>
+      <Status
+        stock={stock}
+        incubated={incubated}
+        hatched={hatched}
+        invertil={invertil}
+      />
     </div>
   );
 }

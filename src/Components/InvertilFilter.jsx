@@ -12,16 +12,31 @@ export default function InvertilFilter(props) {
     const incubated = Number(props.incubated);
 
     const invertil = (incubated * percentage) / 100;
-    props.setInvertil(invertil);
-    props.setHatched(incubated - invertil);
+    props.setInvertil(Math.floor(invertil));
+    props.setHatched(Math.floor(incubated - invertil));
   };
   return (
-    <div>
-      <h3>After 18 days we filter the invertil eggs</h3>
+    <div className='section'>
+      <h3 className='section-title'>
+        After 18 days we filter the invertil eggs
+      </h3>
+      <p className='section-description'>
+        Here is where we estimate how percent will hatching eggs is not hatched
+        and will desroyed in process.
+      </p>
       <form onSubmit={calculate}>
-        <label>Estimation of invertil (%): </label>
-        <input type='number' onChange={handleChange} value={percentage} />
-        <button>Submit</button>
+        <label>Estimation of invertile: </label>
+        <br />
+        <input
+          className='input invertile-input'
+          type='number'
+          onChange={handleChange}
+          value={percentage}
+          max={100}
+        />
+        <span>%</span>
+        <br />
+        <button className='submit'>Submit</button>
       </form>
     </div>
   );

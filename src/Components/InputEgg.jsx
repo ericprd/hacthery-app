@@ -17,8 +17,14 @@ export default function InputEgg(props) {
   };
   return (
     <form onSubmit={handleSubmit}>
-      <input type='number' onChange={handleChange} value={eggs} />
-      <button>Submit</button>
+      <input
+        className='input'
+        type='number'
+        onChange={handleChange}
+        value={eggs}
+      />
+      <br />
+      <button className='submit'>Submit</button>
     </form>
   );
 }
